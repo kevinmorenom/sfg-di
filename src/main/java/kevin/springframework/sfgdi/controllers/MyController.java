@@ -1,6 +1,6 @@
-package guru.springframework.sfgdi.controllers;
+package kevin.springframework.sfgdi.controllers;
 
-import guru.springframework.sfgdi.services.GreetingService;
+import kevin.springframework.sfgdi.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 /**

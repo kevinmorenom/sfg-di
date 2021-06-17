@@ -1,4 +1,4 @@
-package guru.springframework.sfgdi.services;
+package kevin.springframework.sfgdi.services;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'kevin.springframework.sfg-di' is invalid and this project uses 'kevin.springframework.sfgdi' instead.
+* The original package name 'kevin.springframework.sfg-di' is invalid and this project uses 'kevin.springframework.sfgdii' instead.
 
 # Getting Started
 
