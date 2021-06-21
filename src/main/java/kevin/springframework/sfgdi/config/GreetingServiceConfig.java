@@ -1,5 +1,7 @@
 package kevin.springframework.sfgdi.config;
 
+import com.springframework.pets.PetService;
+import com.springframework.pets.PetServiceFactory;
 import kevin.springframework.sfgdi.repositories.EnglishGreetingRepository;
 import kevin.springframework.sfgdi.repositories.EnglishGreetingRepositoryImpl;
 import kevin.springframework.sfgdi.services.*;
@@ -10,6 +12,23 @@ import org.springframework.context.annotation.Profile;
 
 @Configuration
 public class GreetingServiceConfig {
+
+    @Profile({"dog", "default"})
+    @Bean
+    PetService dogPetService(PetServiceFactory petServiceFactory){
+       return  petServiceFactory.getPetService("dog");
+    }
+
+    @Profile({"cat"})
+    @Bean
+    PetService catPetService(PetServiceFactory petServiceFactory){
+        return  petServiceFactory.getPetService("cat");
+    }
+
+    @Bean
+    PetServiceFactory petServiceFactory(){
+        return new PetServiceFactory();
+    }
 
     @Profile({"ES", "default"})
     @Bean("i18nService")
