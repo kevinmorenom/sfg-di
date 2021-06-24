@@ -7,8 +7,10 @@ import kevin.springframework.sfgdi.repositories.EnglishGreetingRepository;
 import kevin.springframework.sfgdi.repositories.EnglishGreetingRepositoryImpl;
 import kevin.springframework.sfgdi.services.*;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
 
+@EnableConfigurationProperties(SfgConstructorConfig.class)
 @Configuration
 public class GreetingServiceConfig {
 

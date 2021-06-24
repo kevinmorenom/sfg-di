@@ -2,6 +2,7 @@ package kevin.springframework.sfgdi;
 
 
 import kevin.springframework.sfgdi.config.SfgConfiguration;
+import kevin.springframework.sfgdi.config.SfgConstructorConfig;
 import kevin.springframework.sfgdi.controllers.*;
 import kevin.springframework.sfgdi.datasource.FakeDataSource;
 import org.springframework.boot.SpringApplication;
@@ -52,6 +53,12 @@ public class SfgDiApplication {
 		System.out.println(sfgConfiguration.getUsername());
 		System.out.println(sfgConfiguration.getPassword());
 		System.out.println(sfgConfiguration.getJdbcurl());
+
+		System.out.println("------- Constructor Binding");
+		SfgConstructorConfig sfgConstructorConfig = ctx.getBean(SfgConstructorConfig.class);
+		System.out.println(sfgConstructorConfig.getUsername());
+		System.out.println(sfgConstructorConfig.getPassword());
+		System.out.println(sfgConstructorConfig.getJdbcurl());
 	}
 
 }
