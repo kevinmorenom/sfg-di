@@ -1,7 +1,18 @@
 spring:
   profiles:
-    active: dog,EN,qa
+    active:
+      -  dog
+      -  EN
+      -  qa
 guru:
   username: YmlUser
   password: YmlPassword
   jdbcurl:  YmlJdbcUrl
+
+---
+spring:
+  profiles: prod
+guru:
+  username: YmlProdUser
+  password: YmlProdPassword
+  jdbcurl:  YmlProdJdbcUrl
